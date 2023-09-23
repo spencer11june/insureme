@@ -21,7 +21,7 @@ stages {
        } 
    stage('Create Docker Image of App') {
      steps {
-       sh 'docker built -t spencer112/insureme-project:1.0 .'
+       sh 'docker build -t spencer112/insureme-project:1.0 .'
            }
       }
    }
