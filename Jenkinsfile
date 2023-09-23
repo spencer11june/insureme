@@ -9,5 +9,10 @@ stages {
         git 'https://github.com/spencer11june/insureme.git'
              }
         }
+    stage('Build Package') {
+      steps {
+        sh 'mvn package'
+       }
+    }
 }
 } 
