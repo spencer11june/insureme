@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: Install Docker
+    apt: name: git update_cache=yes state=present
+  - name: Start Docker Service
+    command: sudo systemctl start docker
+  - name: Login to Docket
+  - name: Deploy your application and run as container
+    command: docker run -idt -p 8080:8080 spencer112/insureme-project:1.0
