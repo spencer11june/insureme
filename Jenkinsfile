@@ -32,5 +32,10 @@ stages {
            sh 'docker push spencer112/insureme-project:1.0'
             }
        }
+   stage('Application Deploy-Container') {
+     steps {
+           ansiblePlaybook become: true, credentialsId: 'SSH2-Key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'prod.inv', playbook: 'deployplaybook.yml'
+           }
+      }
    }
 }
