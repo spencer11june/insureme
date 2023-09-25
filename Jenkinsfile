@@ -24,5 +24,13 @@ stages {
        sh 'docker build -t spencer112/insureme-project:1.0 .'
            }
       }
+  stage('Docker image push') {
+      steps {
+            withCredentials([usernamePassword(credentialsId: 'docker1_hub', passwordVariable: 'docker_password', usernameVariable: 'docker_user')]) {
+           sh 'docker login -u ${docker_user} -p ${docker_password}'
+            }
+           sh 'docker push spencer112/insureme-project:1.0 .'
+            }
+       }
    }
 }
