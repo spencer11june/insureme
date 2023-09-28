@@ -8,4 +8,4 @@
     command: sudo systemctl start docker
   - name: Login to Docker
   - name: Deploy your application and run as container
-    command: docker run -idt -p 8080:8080 spencer112/insureme-project:1.0
+    command: docker run -itd -p 8080:8080 spencer112/insureme-project:1.0
