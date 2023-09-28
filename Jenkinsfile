@@ -34,7 +34,7 @@ stages {
        }
    stage('Application Deploy-Container') {
      steps {
-           ansiblePlaybook credentialsId: 'ubuntu2-ssh', disableHostKeyChecking: true, installation: 'ansible', inventory: 'prod.inv', playbook: 'deploy.yml'
+           ansiblePlaybook credentialsId: 'new-ubuntu-ssh', disableHostKeyChecking: true, installation: 'ansible', inventory: 'prod.inv', playbook: 'deploy.yml'
            }
       }
    }
