@@ -3,7 +3,7 @@
   become: true
   tasks:
   - name: Install Docker
-    apt: name: git update_cache=yes state=present
+    apt: name: docker update_cache=yes state=present
   - name: Start Docker Service
     command: sudo systemctl start docker
   - name: Login to Docket
