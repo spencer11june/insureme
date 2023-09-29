@@ -34,7 +34,8 @@ stages {
        }
    stage('Application Deploy-Container') {
      steps {
-           ansiblePlaybook credentialsId: 'new-ubuntu-ssh', disableHostKeyChecking: true, installation: 'ansible', inventory: 'prod.inv', playbook: 'deploy.yml'
+           #ansiblePlaybook credentialsId: 'new-ubuntu-ssh', disableHostKeyChecking: true, installation: 'ansible', inventory: 'prod.inv', playbook: 'deploy.yml'
+            sh 'docker run -itd -p 8080:8080 spencer112/insureme-project:1.0'
            }
       }
    }
