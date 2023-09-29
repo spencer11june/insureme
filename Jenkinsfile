@@ -34,7 +34,7 @@ stages {
        }
    stage('Application Deploy-Container') {
      steps {
-            sh 'docker run -itd -p 8090:8080 spencer112/insureme-project:1.0'
+            sh 'docker run -itd -p 8084:8081 spencer112/insureme-project:1.0'
            }
       }
    }
